@@ -1,0 +1,9 @@
+/* Base : */
+@import './styles/reset.css'; /* box-model resets *//* .styleSheets[0] */
+@import './styles/variables.css'; /* :root{} *//* .styleSheets[1] */
+
+/* 3rd-parties (a.k.a vendors) : */
+/* ... */
+
+/* User-defined styling : */
+/* ... */
