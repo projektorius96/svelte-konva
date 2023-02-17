@@ -19,7 +19,6 @@
 
     onMount(()=>{
         isMounted = true;
-        console.log("kText=?", kText);
     })
 
     $: if(isMounted){
