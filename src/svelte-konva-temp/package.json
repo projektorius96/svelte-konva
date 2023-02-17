@@ -1,0 +1,6 @@
+{
+    "name": "svelte-konva",
+    "author" : "projektorius96",
+    "version": "0.0.1",
+    "module": "index.js"
+}
