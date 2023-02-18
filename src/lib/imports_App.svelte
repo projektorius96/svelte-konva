@@ -1,7 +1,7 @@
 <script>
     import './app.css'
     import { onMount } from 'svelte';
-    // import SvelteKonva from './components/kIndex.js';
+    // import SvelteKonva from './components/kIndex';
     // import { ComponentLinker as Paint } from './components/utils/ComponentLinker';
     import Svelte_Konva from 'svelte-konva-local';
     import { fullViewportWidth, fullViewportHeight } from './components/utils/viewport';
