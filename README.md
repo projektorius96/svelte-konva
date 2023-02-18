@@ -59,6 +59,10 @@
 
 > Hopefully, it works just fine, otherwise please raise an issue on this repo . Cheers !
 
+### Live demo
+
+[![Run on Repl.it](https://replit.com/badge/github/projektorius96/svelte-konva)](https://replit.com/@projektorius96/svelte-konva-demo)
+
 ---
 
 Regards,
