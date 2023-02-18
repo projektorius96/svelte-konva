@@ -1,9 +1,7 @@
-/* Base : */
-@import './styles/reset.css'; /* box-model resets *//* .styleSheets[0] */
-@import './styles/variables.css'; /* :root{} *//* .styleSheets[1] */
-
-/* 3rd-parties (a.k.a vendors) : */
-/* ... */
-
-/* User-defined styling : */
-/* ... */
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

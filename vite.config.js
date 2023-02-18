@@ -6,8 +6,10 @@ import { resolve } from 'path';
 export default defineConfig({
   plugins: [svelte()],
   build: {
-    outDir: resolve(__dirname, 'src/svelte-konva-temp/'),
+    /** @param {outDir} is optional, default is <root>/dist */
+    outDir: resolve(__dirname, 'src/svelte-konva-linked/'), 
     lib: {
+      /** @param {entry} it consider that 'src/exports_main.js' contains minimum exports to make sure it would work in Svelte (Svelte is significantly fussy at it)  */
       entry: resolve(__dirname, 'src/exports_main.js'),
       formats: ['es'],
       fileName: 'index'

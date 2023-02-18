@@ -3,7 +3,7 @@
     import { onMount } from 'svelte';
     // import SvelteKonva from './components/kIndex.js';
     // import { ComponentLinker as Paint } from './components/utils/ComponentLinker';
-    import Svelte_Konva from 'svelte-konva';
+    import Svelte_Konva from 'svelte-konva-local';
     import { fullViewportWidth, fullViewportHeight } from './components/utils/viewport';
 
     const {SvelteKonva, ComponentLinker} = Svelte_Konva;
