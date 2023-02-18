@@ -1,10 +1,12 @@
 <script>
     import './app.css'
     import { onMount } from 'svelte';
-    import SvelteKonva from './components/kIndex.js';
-    /* import SvelteKonva from 'svelte-konva--linked'; */
-    import { ComponentLinker as Paint } from './components/utils/ComponentLinker';
+    // import SvelteKonva from './components/kIndex.js';
+    // import { ComponentLinker as Paint } from './components/utils/ComponentLinker';
+    import Svelte_Konva from 'svelte-konva-local';
     import { fullViewportWidth, fullViewportHeight } from './components/utils/viewport';
+
+    const {SvelteKonva, ComponentLinker} = Svelte_Konva;
 
     const {
     
@@ -24,7 +26,7 @@
     $: if(isMounted){
         // DEV_NOTE: Register stage, layer, etc. inside onMount or later (e.g. isMounted) to bypass error [see – cont'd]
         // [cont'd] - "ReferenceError: document is not defined"
-        stage = Paint(kStage, {
+        stage = ComponentLinker(kStage, {
             /* container: document.getElementById("root"), */// [PASSED]
             width: 960,
             height: 640,
@@ -33,8 +35,8 @@
         stage.setAttr('height', fullViewportHeight); // # FIXES HEIGHT SCALING ISSUE
         /* console.log(`--after w:${stage.getAttr('width')} : --after h: ${stage.getAttr('height')}`); */// [PASSED]
 
-        layer = Paint(kLayer);
-        group = Paint(kGroup, {
+        layer = ComponentLinker(kLayer);
+        group = ComponentLinker(kGroup, {
             draggable: true,
         });
         
@@ -48,7 +50,7 @@
         stage.add(
             layer.add(
                 group.add(
-                    text = Paint(kText, {
+                    text = ComponentLinker(kText, {
                     x: fullViewportWidth / 3, /* <=: DEV_NOTE # centering could be improved in the future ; */
                     y: fullViewportHeight / 3, /* <=: DEV_NOTE # centering could be improved in the future ; */
                     text: "BUILT WITH SVELTE-KONVA 💘",
