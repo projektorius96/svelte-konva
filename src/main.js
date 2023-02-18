@@ -1,6 +1,4 @@
-/* import './lib/app.css'; */
-// import App from './lib/App.svelte';
-import App from './lib/imports_App.svelte'; /* <=: DEV_NOTE # test as a lib */
+import App from './lib/App.svelte';
 
 const app = new App({
 
